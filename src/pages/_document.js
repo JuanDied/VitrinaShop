@@ -4,7 +4,10 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head></Head>
+        <Head>
+          <meta charSet='utf-8'/>
+          <link rel="manifest" href='/manifest.json'/>
+        </Head>
         <body>
           <Main />
 

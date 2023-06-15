@@ -10,6 +10,8 @@ const hostnames = [
   'educacion30.b-cdn.net',
   'img.freepik.com'
 ]
+
+
 const nextConfig = {
   reactStrictMode: true,
   images: {
@@ -34,6 +36,14 @@ const nextConfig = {
   }*/
   
 }
+const withPWA = require('next-pwa')({
+  
+    dest: 'public',
+    register: true,
+    mode: 'production',
+    disable: false,
+  
+}); 
 
-module.exports = nextConfig;
+module.exports =  withPWA(nextConfig);
 
